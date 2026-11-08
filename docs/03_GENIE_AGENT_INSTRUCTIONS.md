@@ -58,6 +58,30 @@ For trend questions, group by order_date, delivery_date, checked_date, city_id, 
 If a user asks for root cause of a DQ issue, summarize the failing rule, source table, severity, failed record count, and representative source_record_json examples. Do not expose more record-level detail than needed.
 
 If the question is ambiguous, ask a short follow-up question about date range, city, merchant, cuisine, or metric.
+
+Order : A customer checkout request placed with a merchant
+
+Delivered order : Order where order_status = delivered
+
+Cancelled order : Order where order_status starts with cancelled
+
+Gross booking amount : Customer-facing total payment amount
+
+Platform commission : Estimated marketplace revenue from merchant commission
+
+Delivery SLA : Whether actual delivery time is within estimated delivery time plus tolerance
+
+SLA success rate : Share of deliveries completed within SLA
+
+Prep minutes : Time from merchant acceptance to food prepared
+
+Pickup wait minutes : Time from food prepared to courier pickup
+
+Courier travel minutes : Time from pickup to delivery
+
+Quarantined record : Record failing a native data quality rule
+
+Critical DQ rule : Rule that blocks downstream trusted publication when failures exist
 ```
 
 ## 4. Business Terms
